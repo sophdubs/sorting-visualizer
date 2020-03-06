@@ -1,10 +1,14 @@
 import React from 'react';
 
+import Bars from "./Bars";
+
+import "../styles/graph.css";
+
 class Graph extends React.Component {
     render() {
         return (
             <div className="graph">
-                I am a graph
+                <Bars></Bars>
             </div>
         );
     };
