@@ -1,0 +1,52 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: white;
+    color: rgb(0, 238, 255);
+    text-align: center;
+}
+
+.main-container {
+    background: black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 9fr;
+    grid-template-areas: 'header-area'
+                         'main-area';
+    width: 90vw;
+    position: relative;
+    margin:auto;
+}
+
+header {
+    grid-area: header-area;
+    background: green;
+}
+
+main {
+    grid-area: main-area;
+    background: red;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 'graph-area'
+                         'list-area'
+                         'info-area';
+}
+
+section#graph {
+    grid-area: graph-area;
+    background: blue;
+}
+
+section#algorithm-list {
+    grid-area: list-area;
+    background: pink;
+}
+
+section#info {
+    grid-area: info-area;
+    background: yellow;
+}
+
+
+
