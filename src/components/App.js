@@ -9,16 +9,21 @@ class App extends React.Component {
         return (
             <div className="main-container">
                 <header>
-                    <h1>{`<h1>Sorting Algorithm Visualizer</h1>`}</h1>
+                    {/* <h1>{`<h1>Sorting Algorithm Visualizer</h1>`}</h1> */}
+                    <h1><span className="blue">{`<h1>`}</span>Sorting Algorithm Visualizer<span className="blue">{`</h1>`}</span></h1>
                 </header>
                 <main>
-                    <section id="graph">
+                    <section className="graph-section">
                         <Graph></Graph>
+                        <div className="buttons">
+                            <button className="sort-button"><span className="purple">{`<button>`}</span>SORT<span className="purple">{`</button>`}</span></button>
+                            <button className="reset-button"><span className="purple">{`<button>`}</span>RESET<span className="purple">{`</button>`}</span></button>
+                        </div>
                     </section>
-                    <section id="algorithm-list">
+                    <section className="algorithm-list-section">
 
                     </section>
-                    <section id="info">
+                    <section className="info-section">
 
                     </section>
                 </main>

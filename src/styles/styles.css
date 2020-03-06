@@ -1,7 +1,6 @@
 body {
     font-family: 'Roboto Mono', monospace;
-    background: white;
-    color: rgb(0, 238, 255);
+    background: black;
     text-align: center;
 }
 
@@ -19,34 +18,112 @@ body {
 
 header {
     grid-area: header-area;
-    background: green;
+    background: black;
+    color: white;
+    font-size: 1.3em;
+}
+.blue {
+    color:rgb(0, 238, 255);
+}
+
+.purple {
+    color: rgb(236, 61, 236);
 }
 
 main {
     grid-area: main-area;
-    background: red;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 'graph-area'
                          'list-area'
                          'info-area';
+    grid-gap: 2vw;
 }
 
-section#graph {
+.graph-section {
     grid-area: graph-area;
-    background: blue;
+    background: black;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'graph buttons';
+    grid-gap: 1vw;
 }
 
-section#algorithm-list {
+.graph {
+    grid-area: graph;
+    position: relative;
+    background:rgba(255, 255, 255, 0.12);
+}
+
+.buttons {
+    grid-area: buttons;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'top-button'
+                        'bottom-button';
+    width: 80%;
+    height: 70%;
+    grid-gap: 2vw;
+    position: relative;
+    margin: auto
+}
+
+.sort-button {
+    grid-area: top-button;
+}
+
+.reset-button {
+    grid-area: bottom-button;
+}
+
+.algorithm-list-section {
     grid-area: list-area;
     background: pink;
 }
 
-section#info {
+.info-section {
     grid-area: info-area;
     background: yellow;
 }
 
 
+div.bars {
+    height: 100%;
+}
+
+ul.bar-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 'a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19';
+    grid-gap: 1vw;
+    height: 100%;
+    padding: 0 2vw;
+    position: relative;
+    margin: auto;
+}
+
+li.bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: greenyellow;
+    height: 100%;
+    color: rgba(172, 255, 47, 0);
+}
+
+button {
+    background: black;
+    color: white;
+    font-size: 1.1em;
+    transition: all .2s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
 

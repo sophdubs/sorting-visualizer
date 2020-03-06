@@ -2,8 +2,6 @@ import React from 'react';
 
 import Bars from "./Bars";
 
-import "../styles/graph.css";
-
 class Graph extends React.Component {
     render() {
         return (
