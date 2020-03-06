@@ -2,6 +2,7 @@ import React from 'react';
 
 import Graph from "../components/Graph";
 
+import "../styles/layout.css";
 import "../styles/styles.css";
 
 class App extends React.Component {
@@ -21,6 +22,21 @@ class App extends React.Component {
                         </div>
                     </section>
                     <section className="algorithm-list-section">
+                        <h2><span className="yellow">{`<h2>`}</span>Select A Sorting Algorithm<span className="yellow">{`</h2>`}</span></h2>
+                        <div className="algorithm-uls">
+                            <ul className="algorithm-ul-left">
+                                <li><span className="pink">{`<li>`}</span>Bubble Sort<span className="pink">{`</li>`}</span></li>
+                                <li><span className="pink">{`<li>`}</span>Quick Sort<span className="pink">{`</li>`}</span></li>
+                                <li><span className="pink">{`<li>`}</span>Merge Sort<span className="pink">{`</li>`}</span></li>
+                                <li><span className="pink">{`<li>`}</span>Insertion Sort<span className="pink">{`</li>`}</span></li>
+                            </ul>
+                            <ul className="algorithm-ul-right">
+                                <li><span className="pink">{`<li>`}</span>Selection Sort<span className="pink">{`</li>`}</span></li>
+                                <li><span className="pink">{`<li>`}</span>Heap Sort<span className="pink">{`</li>`}</span></li>
+                                <li><span className="pink">{`<li>`}</span>Bucket Sort<span className="pink">{`</li>`}</span></li>
+                                <li><span className="pink">{`<li>`}</span> Count Sort<span className="pink">{`</li>`}</span></li>
+                            </ul>
+                        </div>
 
                     </section>
                     <section className="info-section">

@@ -1,0 +1,101 @@
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 9fr;
+    grid-template-areas: 'header-area'
+                         'main-area';
+    width: 90vw;
+    position: relative;
+    margin: auto;
+}
+
+header {
+    background: green;
+    grid-area: header-area;
+}
+
+main {
+    background: red;
+    grid-area: main-area;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 'graph-area'
+                        'list-area'
+                        'info-area';
+    grid-gap: 1vw;
+}
+
+.graph-section {
+    background: blue;
+    grid-area: graph-area;
+    display: grid;
+    grid-template-rows: 6fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'graph'
+                        'buttons';
+    grid-gap: 1vw;
+    width: 90%;
+    position: relative;
+    margin: 0px auto 0px auto;  
+}
+
+.graph {
+    grid-area: graph;
+}
+
+.buttons {
+    grid-area: buttons;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-areas: 'left-button right-button speed-bar';
+}
+
+.sort-button {
+    grid-area: left-button;
+}
+
+.reset-button {
+    grid-area: right-button;
+}
+
+.algorithm-list-section {
+    grid-area: list-area;
+}
+
+.algorithm-uls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    margin: auto;
+    text-align: left;
+    width: 60vw;
+}
+
+.info-section {
+    grid-area: info-area;
+}
+
+div.bars {
+    height: 100%;
+}
+
+ul.bar-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 'a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19';
+    grid-gap: 1vw;
+    height: 100%;
+    padding: 0 2vw;
+    position: relative;
+    margin: auto;
+}
+
+li.bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
