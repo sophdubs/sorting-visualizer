@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Graph from "../components/Graph";
+
 import "../styles/styles.css";
 
 class App extends React.Component {
@@ -11,7 +13,7 @@ class App extends React.Component {
                 </header>
                 <main>
                     <section id="graph">
-
+                        <Graph></Graph>
                     </section>
                     <section id="algorithm-list">
 
