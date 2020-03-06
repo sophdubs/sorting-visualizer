@@ -10,16 +10,16 @@
 }
 
 header {
-    background: green;
+    background: black;
     grid-area: header-area;
 }
 
 main {
-    background: red;
+    background: black;
     grid-area: main-area;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 2fr;
     grid-template-areas: 'graph-area'
                         'list-area'
                         'info-area';
@@ -27,7 +27,7 @@ main {
 }
 
 .graph-section {
-    background: blue;
+    background: black;
     grid-area: graph-area;
     display: grid;
     grid-template-rows: 6fr 1fr;
@@ -47,8 +47,10 @@ main {
 .buttons {
     grid-area: buttons;
     display: grid;
-    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-columns: 1fr 1fr 2fr;
     grid-template-areas: 'left-button right-button speed-bar';
+    grid-gap: 2vw;
+    padding: 1vw;
 }
 
 .sort-button {
@@ -72,8 +74,18 @@ main {
     width: 60vw;
 }
 
+.algorithm-ul-left, .algorithm-ul-right {
+    position: relative;
+    margin: auto;
+}
+
 .info-section {
     grid-area: info-area;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'desc runtimes';
+    grid-gap: 2vw;
+    padding: 2vw;
 }
 
 div.bars {

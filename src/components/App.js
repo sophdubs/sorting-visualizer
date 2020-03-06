@@ -10,7 +10,6 @@ class App extends React.Component {
         return (
             <div className="main-container">
                 <header>
-                    {/* <h1>{`<h1>Sorting Algorithm Visualizer</h1>`}</h1> */}
                     <h1><span className="blue">{`<h1>`}</span>Sorting Algorithm Visualizer<span className="blue">{`</h1>`}</span></h1>
                 </header>
                 <main>
@@ -23,6 +22,7 @@ class App extends React.Component {
                     </section>
                     <section className="algorithm-list-section">
                         <h2><span className="yellow">{`<h2>`}</span>Select A Sorting Algorithm<span className="yellow">{`</h2>`}</span></h2>
+                        <h3><span className="green">{`<h3>`}</span>Selection: NULL<span className="green">{`</h3>`}</span></h3>
                         <div className="algorithm-uls">
                             <ul className="algorithm-ul-left">
                                 <li><span className="pink">{`<li>`}</span>Bubble Sort<span className="pink">{`</li>`}</span></li>
@@ -34,12 +34,27 @@ class App extends React.Component {
                                 <li><span className="pink">{`<li>`}</span>Selection Sort<span className="pink">{`</li>`}</span></li>
                                 <li><span className="pink">{`<li>`}</span>Heap Sort<span className="pink">{`</li>`}</span></li>
                                 <li><span className="pink">{`<li>`}</span>Bucket Sort<span className="pink">{`</li>`}</span></li>
-                                <li><span className="pink">{`<li>`}</span> Count Sort<span className="pink">{`</li>`}</span></li>
+                                <li><span className="pink">{`<li>`}</span>Count Sort<span className="pink">{`</li>`}</span></li>
                             </ul>
                         </div>
 
                     </section>
                     <section className="info-section">
+                        <div className="description">
+                            <h4><span className="dark-blue">{`<h4>`}</span>Algorithm Description:<span className="dark-blue">{`</h4>`}</span></h4>
+                            <p><span className="orange">{`<p>`}</span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores ratione dolor ut recusandae at consequuntur quo iure architecto doloribus, quam eius fugiat, iusto nihil. Possimus a error mollitia quam autem!<span className="orange">{`</p>`}</span></p>
+                        </div>
+                        <div className="runtimes">
+                            <div className="run-time">
+                            <h4><span className="dark-blue">{`<h4>`}</span>Algorithm Run Time:<span className="dark-blue">{`</h4>`}</span></h4>
+                                <p><span className="orange">{`<p>`}</span>Lorem ipsum,  error mollitia quam autem!<span className="orange">{`</p>`}</span></p>
+                            </div>
+                            <div className="space-complexity">
+                            <h4><span className="dark-blue">{`<h4>`}</span>Algorithm Space Complexity:<span className="dark-blue">{`</h4>`}</span></h4>
+                                <p><span className="orange">{`<p>`}</span>Lorem ipsum,  error mollitia quam autem!<span className="orange">{`</p>`}</span></p>
+                            </div>
+                        </div>
+
 
                     </section>
                 </main>
