@@ -61,6 +61,10 @@ main {
     grid-area: right-button;
 }
 
+.slider {
+    width: 90%;
+}
+
 .algorithm-list-section {
     grid-area: list-area;
 }

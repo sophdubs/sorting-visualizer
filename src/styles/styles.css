@@ -18,8 +18,24 @@ header {
     font-size: 2em;
 }
 
+.algorithm-list-section h3 {
+    font-size: 1.6em;
+}
+
 .info-section {
     background: black;
+    padding-bottom: 0px;
+}
+
+.info-section h4 {
+    font-size: 1.5em;
+    margin-bottom: 0px;
+}
+
+.info-section p {
+    font-size: 1.3em;
+    margin-top: 0px;
+    padding: 1vw;
 }
 
 li.bar {
@@ -30,9 +46,9 @@ li.bar {
 button {
     background: black;
     color: white;
-    font-size: 1.1em;
+    font-size: 1.3em;
     transition: all .2s ease-in-out;
-    border: 1px dotted white;
+    border: none;
 }
 
 button:hover {
@@ -44,8 +60,8 @@ li {
     list-style-type: none;
 }
 
-
 .algorithm-uls li {
+    font-size: 1.4em;
     transition: all .2s ease-in-out;
 }
 
