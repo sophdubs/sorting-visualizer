@@ -18,6 +18,7 @@ class App extends React.Component {
                         <div className="buttons">
                             <button className="sort-button"><span className="purple">{`<button>`}</span>SORT<span className="purple">{`</button>`}</span></button>
                             <button className="reset-button"><span className="purple">{`<button>`}</span>RESET<span className="purple">{`</button>`}</span></button>
+                            <input type="range" min="1" max="100" value="50" className="slider"/>
                         </div>
                     </section>
                     <section className="algorithm-list-section">
