@@ -6,6 +6,8 @@ import "../styles/layout.css";
 import "../styles/styles.css";
 
 import { data } from "../data";
+import { algorithms } from "../algorithms";
+import { swap } from "../helpers";
 
 class App extends React.Component {
     constructor() {
@@ -23,6 +25,11 @@ class App extends React.Component {
 
     handleSort = () => {
         console.log('SORTING');
+        const bars = Array.from(document.querySelectorAll(".bar-list li"));
+        if (this.state.selected !== 'default') {
+            const moves = algorithms[this.state.selected](bars);
+            swap(moves);
+        } 
     }
 
     componentDidMount() {
