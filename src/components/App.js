@@ -13,7 +13,7 @@ class App extends React.Component {
         super();
         this.state = {
             selected: 'default',
-            speed: 50
+            speed: 63
         }
     }
 
@@ -23,16 +23,21 @@ class App extends React.Component {
     }
 
     handleSort = () => {
-        console.log('SORTING');
         const bars = Array.from(document.querySelectorAll(".bar-list li"));
         if (this.state.selected !== 'default') {
             const moves = algorithms[this.state.selected](bars);
-            swap(moves);
+            swap(moves, this.state.speed);
         } 
     }
 
     handleReset = () => {
         populateGraph();
+    }
+
+    handleSliderChange = (e) => {
+        let speed = e.target.value;
+        this.setState({speed});
+        console.log(this.state.speed);
     }
   
     render() {
@@ -47,7 +52,11 @@ class App extends React.Component {
                         <div className="buttons">
                             <button className="sort-button" onClick={this.handleSort}><span className="purple">{`<button>`}</span>SORT<span className="purple">{`</button>`}</span></button>
                             <button className="reset-button" onClick={this.handleReset}><span className="purple">{`<button>`}</span>RESET<span className="purple">{`</button>`}</span></button>
-                            <input type="range" min="1" max="100" value="50" className="slider"/>
+                            <div className="range">
+                                <input type="range" min={0} max={125} value={this.state.speed} onChange={this.handleSliderChange} className="slider" id="slider"/>
+                                <span className="slow-range-label">slow</span>
+                                <span className="fast-range-label">fast</span>
+                            </div>
                         </div>
                     </section>
                     <section className="algorithm-list-section">

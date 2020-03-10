@@ -56,6 +56,14 @@ button:hover {
     transform: scale(1.1);
 }
 
+.slow-range-label {
+    float: left;
+}
+
+.fast-range-label {
+    float: right;
+}
+
 li {
     list-style-type: none;
 }

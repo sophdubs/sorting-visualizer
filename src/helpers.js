@@ -22,7 +22,7 @@ export const populateGraph = function() {
     list.innerHTML = barList.join('');
 }
 
-export const swap = function (arr) {
+export const swap = function (arr, speed) {
     for (let i = 0; i < arr.length; i++) {
         setTimeout (() => {
             let a = arr[i][0];
@@ -36,7 +36,7 @@ export const swap = function (arr) {
             barB.style.gridArea = tempArea;
  
  
-        }, i * 50);
+        }, i * (150- speed));
     }
  }
  
