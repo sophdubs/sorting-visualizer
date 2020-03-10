@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Graph from "../components/Graph";
 
 import "../styles/layout.css";
@@ -7,7 +6,7 @@ import "../styles/styles.css";
 
 import { data } from "../data";
 import { algorithms } from "../algorithms";
-import { swap } from "../helpers";
+import { swap, populateGraph } from "../helpers";
 
 class App extends React.Component {
     constructor() {
@@ -32,8 +31,8 @@ class App extends React.Component {
         } 
     }
 
-    componentDidMount() {
-        console.log(this.state);
+    handleReset = () => {
+        populateGraph();
     }
   
     render() {
@@ -47,7 +46,7 @@ class App extends React.Component {
                         <Graph></Graph>
                         <div className="buttons">
                             <button className="sort-button" onClick={this.handleSort}><span className="purple">{`<button>`}</span>SORT<span className="purple">{`</button>`}</span></button>
-                            <button className="reset-button"><span className="purple">{`<button>`}</span>RESET<span className="purple">{`</button>`}</span></button>
+                            <button className="reset-button" onClick={this.handleReset}><span className="purple">{`<button>`}</span>RESET<span className="purple">{`</button>`}</span></button>
                             <input type="range" min="1" max="100" value="50" className="slider"/>
                         </div>
                     </section>
