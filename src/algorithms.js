@@ -21,7 +21,7 @@ export const algorithms = {
         do {
             bubbleSort(nums);
         } while (swapped);
-        return [nums,moves]; 
+        return moves; 
     },
     insertionSort: (nums) => {
         let moves = [];
@@ -37,7 +37,7 @@ export const algorithms = {
             }
             nums[j+1] = key;
         }
-        return [nums,moves];
+        return moves;
     },
     selectionSort: (nums) => {
         let moves = [];
@@ -58,7 +58,7 @@ export const algorithms = {
 
             }
         }
-        return [nums,moves];
+        return moves;
     }
 
 };

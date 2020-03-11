@@ -23,10 +23,13 @@ class App extends React.Component {
     }
 
     handleSort = () => {
+        if (this.state.selected === 'default'){
+            alert('Please select a sorting algorithm from the list');
+        }
         let bars = Array.from(document.querySelectorAll(".bar-list li"));
         bars = bars.map(bar => parseInt(bar.innerHTML));
         if (this.state.selected !== 'default') {
-            const [nums, moves] = algorithms[this.state.selected](bars);
+            const moves = algorithms[this.state.selected](bars);
             swap(moves, this.state.speed);
         } 
     }
