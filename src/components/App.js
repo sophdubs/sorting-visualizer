@@ -23,9 +23,10 @@ class App extends React.Component {
     }
 
     handleSort = () => {
-        const bars = Array.from(document.querySelectorAll(".bar-list li"));
+        let bars = Array.from(document.querySelectorAll(".bar-list li"));
+        bars = bars.map(bar => parseInt(bar.innerHTML));
         if (this.state.selected !== 'default') {
-            const moves = algorithms[this.state.selected](bars);
+            const [nums, moves] = algorithms[this.state.selected](bars);
             swap(moves, this.state.speed);
         } 
     }

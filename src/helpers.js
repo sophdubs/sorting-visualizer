@@ -22,6 +22,10 @@ export const populateGraph = function() {
     list.innerHTML = barList.join('');
 }
 
+// const checkIfSorted(nums, i, barA) {
+
+// }
+
 export const swap = function (arr, speed) {
     for (let i = 0; i < arr.length; i++) {
         setTimeout (() => {
@@ -30,13 +34,16 @@ export const swap = function (arr, speed) {
             
             let barA = document.querySelector(`.index${a}`);
             let barB = document.querySelector(`.index${b}`);
- 
+            
             let tempArea = barA.style.gridArea;
             barA.style.gridArea = barB.style.gridArea;
             barB.style.gridArea = tempArea;
- 
- 
         }, i * (150- speed));
     }
  }
+
+
+
+
+
  
