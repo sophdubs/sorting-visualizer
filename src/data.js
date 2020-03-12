@@ -35,11 +35,11 @@ export const data = {
         runtime: '',
         space: ''
     },
-    bucketSort: {
-        type: 'Bucket Sort',
-        description: '',
-        runtime: '',
-        space: ''
+    cocktailShakerSort: {
+        type: 'Cocktail Shaker Sort',
+        description: 'blah blah',
+        runtime: 'O(blah)',
+        space: 'bigO'
     },
     countSort: {
         type: 'Count Sort',

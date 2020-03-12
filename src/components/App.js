@@ -90,7 +90,7 @@ class App extends React.Component {
                             <ul className="algorithm-ul-right">
                                 <li data-type="selectionSort" onClick={this.handleClick}><span className="pink">{`<li>`}</span>Selection Sort<span className="pink">{`</li>`}</span></li>
                                 <li data-type="heapSort" onClick={this.handleClick}><span className="pink">{`<li>`}</span>Heap Sort<span className="pink">{`</li>`}</span></li>
-                                <li data-type="bucketSort" onClick={this.handleClick}><span className="pink">{`<li>`}</span>Bucket Sort<span className="pink">{`</li>`}</span></li>
+                                <li data-type="cocktailShakerSort" onClick={this.handleClick}><span className="pink">{`<li>`}</span>Cocktail Shaker Sort<span className="pink">{`</li>`}</span></li>
                                 <li data-type="countSort" onClick={this.handleClick}><span className="pink">{`<li>`}</span>Count Sort<span className="pink">{`</li>`}</span></li>
                             </ul>
                         </div>
