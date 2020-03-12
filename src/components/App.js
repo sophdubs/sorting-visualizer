@@ -6,20 +6,31 @@ import "../styles/styles.css";
 
 import { data } from "../data";
 import { algorithms } from "../algorithms";
-import { swap, populateGraph } from "../helpers";
+import { swap } from "../helpers";
 
 class App extends React.Component {
     constructor() {
         super();
-        this.state = {
-            selected: 'default',
-            speed: 63
+        if (localStorage.getItem('sorting-app')) {
+            this.state = {
+                selected: JSON.parse(localStorage.getItem('sorting-app'))['selected'],
+                speed: JSON.parse(localStorage.getItem('sorting-app'))['speed']
+            }
+        } else {
+            this.state = {
+                selected: 'default',
+                speed: 63
+            }
+            localStorage.setItem('sorting-app', JSON.stringify(this.state));
         }
     }
 
     handleClick = (e) => {
         const selected = e.target.dataset.type;
         this.setState({selected: selected});
+        console.log(this.state);
+        localStorage.setItem('sorting-app', JSON.stringify(this.state));
+        console.log(localStorage.getItem('sorting-app'));
     }
 
     handleSort = () => {
@@ -30,18 +41,21 @@ class App extends React.Component {
         bars = bars.map(bar => parseInt(bar.innerHTML));
         if (this.state.selected !== 'default') {
             const moves = algorithms[this.state.selected](bars);
-            swap(moves, this.state.speed);
+            swap(moves, this.state.speed, this);
         } 
     }
 
     handleReset = () => {
-        populateGraph();
+        window.location.reload(true);
     }
 
     handleSliderChange = (e) => {
         let speed = e.target.value;
-        this.setState({speed});
-        console.log(this.state.speed);
+        console.log(speed);
+        this.setState({speed: speed});
+        console.log(this.state);
+        localStorage.setItem('sorting-app', JSON.stringify(this.state));
+        console.log(localStorage.getItem('sorting-app'));
     }
   
     render() {

@@ -60,7 +60,6 @@ export const algorithms = {
         }
         return moves;
     }
-
 };
 
 // const mergeSort = (arr) => {

@@ -1,3 +1,5 @@
+import { bigIntLiteral } from "@babel/types";
+
 const MAX = 99;
 const LENGTH = 20;
 
@@ -22,13 +24,15 @@ export const populateGraph = function() {
     list.innerHTML = barList.join('');
 }
 
-// const checkIfSorted(nums, i, barA) {
 
-// }
 
-export const swap = function (arr, speed) {
+export const swap = (arr, speed, self) => {
     for (let i = 0; i < arr.length; i++) {
-        setTimeout (() => {
+        let timeout = setTimeout (() => {
+            if (self.state.abort){
+                clearTimeout(timeout);
+                return;
+            };
             let a = arr[i][0];
             let b = arr[i][1];
             
