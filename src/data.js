@@ -37,9 +37,9 @@ export const data = {
     },
     cocktailShakerSort: {
         type: 'Cocktail Shaker Sort',
-        description: 'blah blah',
-        runtime: 'O(blah)',
-        space: 'bigO'
+        description: 'Cocktail Shaker sort is a slight variation of bubble sort. It differs in that instead of repeatedly passing through the list from bottom to top, it passes alternately from bottom to top and then from top to bottom. It has the same runtime as Bubble Sort, but in practice, it can achieve a slightly better performance.',
+        runtime: 'Cocktail Shaker Sort has an average and worst-case running time of O(n2), and can only run in its best-case running time of O(n) when the input list is already sorted.',
+        space: 'The space complexity for Cocktail Shaker Sort is O(1), because only a single additional memory space is required i.e. for a temp variable when swapping two elements in the list.'
     },
     countSort: {
         type: 'Count Sort',
