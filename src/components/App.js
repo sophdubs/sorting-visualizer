@@ -11,26 +11,15 @@ import { swap } from "../helpers";
 class App extends React.Component {
     constructor() {
         super();
-        if (localStorage.getItem('sorting-app')) {
-            this.state = {
-                selected: JSON.parse(localStorage.getItem('sorting-app'))['selected'],
-                speed: JSON.parse(localStorage.getItem('sorting-app'))['speed']
-            }
-        } else {
-            this.state = {
-                selected: 'default',
-                speed: 63
-            }
-            localStorage.setItem('sorting-app', JSON.stringify(this.state));
+        this.state = {
+            selected: 'default',
+            speed: 63
         }
     }
 
     handleClick = (e) => {
         const selected = e.target.dataset.type;
-        this.setState({selected: selected});
-        console.log(this.state);
-        localStorage.setItem('sorting-app', JSON.stringify(this.state));
-        console.log(localStorage.getItem('sorting-app'));
+        this.setState({selected});
     }
 
     handleSort = () => {
@@ -51,11 +40,19 @@ class App extends React.Component {
 
     handleSliderChange = (e) => {
         let speed = e.target.value;
-        console.log(speed);
-        this.setState({speed: speed});
-        console.log(this.state);
-        localStorage.setItem('sorting-app', JSON.stringify(this.state));
-        console.log(localStorage.getItem('sorting-app'));
+        this.setState({speed});
+    }
+
+    //Set state to be equal to local storage stuff
+    componentDidMount() {
+        let speed = JSON.parse(localStorage.getItem('sorting-app')).speed;
+        let selected = JSON.parse(localStorage.getItem('sorting-app')).selected;
+        this.setState({speed, selected});
+    }
+
+    //This is called anytime state is changed so use it to backup local storage
+    componentDidUpdate() {
+        localStorage.setItem('sorting-app', JSON.stringify(this.state)); 
     }
   
     render() {
