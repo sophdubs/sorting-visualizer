@@ -7,6 +7,7 @@ import "../styles/styles.css";
 import { data } from "../data";
 import { algorithms } from "../algorithms";
 import { swap } from "../helpers";
+import {populateGraph} from "../helpers";
 
 class App extends React.Component {
     constructor() {
@@ -25,6 +26,10 @@ class App extends React.Component {
     handleSort = () => {
         if (this.state.selected === 'default'){
             alert('Please select a sorting algorithm from the list');
+        }
+        if (document.querySelector('.bar').classList.contains('sorted')) {
+            console.log('this is sorted!!');
+            populateGraph();
         }
         let bars = Array.from(document.querySelectorAll(".bar-list li"));
         bars = bars.map(bar => parseInt(bar.innerHTML));
