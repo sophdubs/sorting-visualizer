@@ -50,9 +50,13 @@ class App extends React.Component {
 
     //Set state to be equal to local storage stuff
     componentDidMount() {
-        let speed = JSON.parse(localStorage.getItem('sorting-app')).speed;
-        let selected = JSON.parse(localStorage.getItem('sorting-app')).selected;
-        this.setState({speed, selected});
+        if (localStorage.getItem('sorting-app')){
+            let speed = JSON.parse(localStorage.getItem('sorting-app')).speed;
+            let selected = JSON.parse(localStorage.getItem('sorting-app')).selected;
+            this.setState({speed, selected});
+        } else {
+            localStorage.setItem('sorting-app', JSON.stringify(this.state));
+        }
     }
 
     //This is called anytime state is changed so use it to backup local storage
@@ -92,7 +96,7 @@ class App extends React.Component {
                             <ul className="algorithm-ul-right">
                                 <li data-type="selectionSort" onClick={this.handleClick}><span className="pink">{`<li>`}</span>Selection Sort<span className="pink">{`</li>`}</span></li>
                                 <li data-type="heapSort" onClick={this.handleClick}><span className="pink">{`<li>`}</span>Heap Sort<span className="pink">{`</li>`}</span></li>
-                                <li data-type="cocktailShakerSort" onClick={this.handleClick}><span className="pink">{`<li>`}</span>Cocktail Shaker Sort<span className="pink">{`</li>`}</span></li>
+                                <li data-type="shakerSort" onClick={this.handleClick}><span className="pink">{`<li>`}</span>Shaker Sort<span className="pink">{`</li>`}</span></li>
                                 <li data-type="countSort" onClick={this.handleClick}><span className="pink">{`<li>`}</span>Count Sort<span className="pink">{`</li>`}</span></li>
                             </ul>
                         </div>

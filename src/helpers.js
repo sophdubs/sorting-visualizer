@@ -1,5 +1,3 @@
-import { bigIntLiteral } from "@babel/types";
-
 const MAX = 99;
 const LENGTH = 20;
 
@@ -24,8 +22,6 @@ export const populateGraph = function() {
     list.innerHTML = barList.join('');
 }
 
-
-
 export const swap = (arr, speed, self) => {
     for (let i = 0; i < arr.length; i++) {
         let timeout = setTimeout (() => {
@@ -45,14 +41,12 @@ export const swap = (arr, speed, self) => {
         }, i * (150- speed));
     }
     setTimeout(() => {
-        console.log('calling sorted');
         sorted();
     }, (arr.length + 0.8) * (150 - speed));
     
  }
 
  const sorted = () => {
-     console.log('sorted');
      let bars = document.querySelectorAll('.bar');
      bars.forEach(bar => bar.classList.add('sorted'));
  }

@@ -60,7 +60,7 @@ export const algorithms = {
         }
         return moves;
     },
-    cocktailShakerSort: (nums) => {
+    shakerSort: (nums) => {
         let moves = [];
         let is_Sorted = true;
         while (is_Sorted){
