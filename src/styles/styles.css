@@ -106,3 +106,6 @@ li {
     color: green;
 }
 
+li.bar.sorted {
+    background: rgb(26, 243, 18);
+}

@@ -44,6 +44,17 @@ export const swap = (arr, speed, self) => {
             barB.style.gridArea = tempArea;
         }, i * (150- speed));
     }
+    setTimeout(() => {
+        console.log('calling sorted');
+        sorted();
+    }, (arr.length + 0.8) * (150 - speed));
+    
+ }
+
+ const sorted = () => {
+     console.log('sorted');
+     let bars = document.querySelectorAll('.bar');
+     bars.forEach(bar => bar.classList.add('sorted'));
  }
 
 

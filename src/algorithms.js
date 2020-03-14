@@ -73,11 +73,8 @@ export const algorithms = {
                     is_Sorted = true;
                 }
             }
-        
             if (!is_Sorted) break;
-        
             is_Sorted = false;
-        
             for (let j = nums.length - 1; j > 0; j--){
                 if (nums[j-1] > nums[j]) {
                     moves.push([nums[j], nums[j-1]]);
