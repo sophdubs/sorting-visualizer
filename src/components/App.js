@@ -7,7 +7,7 @@ import "../styles/styles.css";
 import { data } from "../data";
 import { algorithms } from "../algorithms";
 import { swap } from "../helpers";
-import {populateGraph} from "../helpers";
+import { populateGraph } from "../helpers";
 
 class App extends React.Component {
     constructor() {
