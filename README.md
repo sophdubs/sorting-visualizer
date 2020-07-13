@@ -1,6 +1,6 @@
 # Sorting Algorithm Visualizer
 
-
+![](algorithm.gif)
 
 ## Project Description
 Sorting Algorithm Visualizer is a a React app that allows the user to select a sorting algorithm and visualize how it works under the hood. It also provides useful information about its logic, time complexity and space complexity.
@@ -24,8 +24,8 @@ https://sophdubs.github.io/sorting-visualizer
 - User can click "RESET" to reshuffle the bars after or during an active sort
 - User is prompted to select a sorting algorithm if they click the sort button without a selection
 
-## Known Bugs:
-- Not all sorting algorithms are implemented yet. As a result, if user selects one of the unimplemented sorting algorithms, the selection is not updated and the sort button does not work.
+## Known Issues:
+- Not all sorting algorithms are implemented yet. For now, selecting these algorithms has been disabled. 
 
 ## Upcoming Features:
 - Finish implementation of Quick Sort, Merge Sort, Heap Sort and Count Sort. 
