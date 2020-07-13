@@ -88,7 +88,7 @@ class App extends React.Component {
                         <h3><span className="green">{`<h3>`}</span>Selection: {data[this.state.selected].type === 'Algorithm' ? 'NULL' : data[this.state.selected].type}<span className="green">{`</h3>`}</span></h3>
                         <div className="algorithm-uls">
                             <ul className="algorithm-ul-left">
-                                <li data-type="bubbleSort" onClick={this.handleClick}><span className="pink">{`<li>`}</span>Bubble Sort<span className="pink">{`</li>`}</span></li>
+                                <li data-type="bubbleSort" disabled onClick={this.handleClick}><span className="pink">{`<li>`}</span>Bubble Sort<span className="pink">{`</li>`}</span></li>
                                 <li data-type="quickSort" onClick={this.handleClick}><span className="pink">{`<li>`}</span>Quick Sort<span className="pink">{`</li>`}</span></li>
                                 <li data-type="mergeSort" onClick={this.handleClick}><span className="pink">{`<li>`}</span>Merge Sort<span className="pink">{`</li>`}</span></li>
                                 <li data-type="insertionSort" onClick={this.handleClick}><span className="pink">{`<li>`}</span>Insertion Sort<span className="pink">{`</li>`}</span></li>
