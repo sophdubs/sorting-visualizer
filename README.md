@@ -25,7 +25,7 @@ https://sophdubs.github.io/sorting-visualizer
 - User is prompted to select a sorting algorithm if they click the sort button without a selection
 
 ## Known Issues:
-- Not all sorting algorithms are implemented yet. For now, selecting these algorithms has been disabled. 
+- Not all sorting algorithms are implemented yet. For now, selecting the unimplemented algorithms has been disabled. 
 
 ## Upcoming Features:
 - Finish implementation of Quick Sort, Merge Sort, Heap Sort and Count Sort. 
